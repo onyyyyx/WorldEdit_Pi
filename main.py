@@ -80,7 +80,7 @@ def command(command):
         mc.postToChat(f'Command "/{command.split(" ")[0]}" doesn\'t exist')
 
 # Repeat capture and start MCPI
-for line in capture("~/.local/bin/com.thebrokenrail.MCPIRebornClient.AppImage"):
+for line in capture("/home/[YOUR_USER_NAME]/.local/bin/com.thebrokenrail.MCPIRebornClient.AppImage"):
 
     # Set the info message
     info = line[0:6]
@@ -91,12 +91,12 @@ for line in capture("~/.local/bin/com.thebrokenrail.MCPIRebornClient.AppImage"):
         # Set the content to whatever the user said
         content = str(line[8:-1])[2:-1]
 
-        if content.startswith('<TheRunaway> //'):
+        if content.startswith('<[MCPI_PSEUDO]> //'):
             mc = Minecraft.create()
-            command(content.split(f'<TheRunaway> //')[1].lower())
-        elif content.startswith('<TheRunaway> /'):
+            command(content.split(f'<TMCPI_PSEUDO]> //')[1].lower())
+        elif content.startswith('<[MCPI_PSEUDO]> /'):
             mc = Minecraft.create()
-            command(content.split(f'<TheRunaway> /')[1].lower())
+            command(content.split(f'<[MCPI_PSEUDO]> /')[1].lower())
 
     # Else if info is an error
     elif info == b"[ERR]:":
