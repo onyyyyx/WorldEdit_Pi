@@ -8,7 +8,7 @@ Installation
 
 In a terminal : `git clone https://github.com/DarkAngel404/WorldEdit_MCPi.git`
 
-#### Don't forget to modify [MCPI_PSEUDO] by your MCPi pseudonyme (from line 94 to line 99 of `main.py`) and [YOUR_OS_USERNAME] by your OS username (by default `pi`)
+#### Don't forget to modify [MCPI_PSEUDO] by your MCPi pseudonyme (line 8 of `main.py`)
 
 Launch
 ======
@@ -21,7 +21,7 @@ Customization
 =============
 
 #### Line 83
-Edit `for line in capture("[YOUR CLIENT]"):`
+Edit `for line in capture("[YOUR CLIENT]")`
 #### Clients :
 - MCPi Reborn : `client["reborn"]`
 - MCPi++ : `client["++"]`
