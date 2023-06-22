@@ -1,5 +1,5 @@
-WorldEdit\_MCPi
-===============
+WorldEdit\_MCPi (read carefully installation)
+=============================================
 
 Normally to re-create WorldEdit mod in MCPi (Reborn or ++)
 
