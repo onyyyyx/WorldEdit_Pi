@@ -1,14 +1,13 @@
-# Created by Wallee#8314/Red-exe-Engineer
-
-""" Version 1.0 """
-
-# Imports
 import subprocess
-from os import listdir
+from os import listdir,getlogin
 
 from mcpi.minecraft import Minecraft
 from commands.items import *
 
+# Edit this variable to set YOUR MCPi's username
+mcpi_name = "YOUR MCPI USERNAME"
+
+clients={"reborn":f'/home/{getlogin()}/.local/bin/com.thebrokenrail.MCPIRebornClient.AppImage', "++":"minecraft-pi-reborn-client"}
 # Define a process to capture chat messages
 def capture(exe):
 
@@ -35,7 +34,7 @@ def capture(exe):
 def command(command):
 
     # Check if the command is in the plugins folder, the reason I check plugins first is so they *can* override default commands
-    if command.split(" ")[0] + ".py" in listdir("plugins") and not command.startswith("."):
+    if command.split(" ")[0] + ".py" in listdir(f"/home/{getlogin()}/WorldEdit/plugins") and not command.startswith("."):
 
         # The plugin may be in development and has a lots of errors/bugs
         try:
@@ -45,7 +44,7 @@ def command(command):
 
             # Run the plugin through a subprocess
             if command.split()[0]!="undo": mc.saveCheckpoint()
-            subprocess.run(args = f'python3 plugins/{command.split(" ")[0]}.py {args}', shell=True, check=True)
+            subprocess.run(args = f'python3 /home/{getlogin()}/WorldEdit/plugins/{command.split(" ")[0]}.py {args}', shell=True, check=True)
 
         # Someone is a bad coder 0_0 (We all make mistakes)
         except Exception as error:
@@ -79,8 +78,9 @@ def command(command):
         # Tell the user that command doesn't exist
         mc.postToChat(f'Command "/{command.split(" ")[0]}" doesn\'t exist')
 
-# Repeat capture and start MCPI
-for line in capture("/home/[YOUR_OS_USERNAME]/.local/bin/com.thebrokenrail.MCPIRebornClient.AppImage"):
+# Edit here to set MCPi Reborn or 
+# MCPi++ ("reborn" or "++")  ↓
+for line in capture(clients["++"]):
 
     # Set the info message
     info = line[0:6]
@@ -91,12 +91,12 @@ for line in capture("/home/[YOUR_OS_USERNAME]/.local/bin/com.thebrokenrail.MCPIR
         # Set the content to whatever the user said
         content = str(line[8:-1])[2:-1]
 
-        if content.startswith('<[MCPI_PSEUDO]> //'):
+        if content.startswith(f'<{mcpi_name}> //'):
             mc = Minecraft.create()
-            command(content.split(f'<TMCPI_PSEUDO]> //')[1].lower())
-        elif content.startswith('<[MCPI_PSEUDO]> /'):
+            command(content.split(f'<{mcpi_name}> //')[1].lower())
+        elif content.startswith(f'<{mcpi_name}> /'):
             mc = Minecraft.create()
-            command(content.split(f'<[MCPI_PSEUDO]> /')[1].lower())
+            command(content.split(f'<{mcpi_name}> /')[1].lower())
 
     # Else if info is an error
     elif info == b"[ERR]:":
