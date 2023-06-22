@@ -80,7 +80,7 @@ def command(command):
         mc.postToChat(f'Command "/{command.split(" ")[0]}" doesn\'t exist')
 
 # Repeat capture and start MCPI
-for line in capture("/home/[YOUR_USER_NAME]/.local/bin/com.thebrokenrail.MCPIRebornClient.AppImage"):
+for line in capture("/home/[YOUR_OS_USERNAME]/.local/bin/com.thebrokenrail.MCPIRebornClient.AppImage"):
 
     # Set the info message
     info = line[0:6]
