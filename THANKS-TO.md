@@ -5,7 +5,7 @@ Thanks to
 
 For his [MCPi Slash Commands mod](https://github.com/Red-exe-Engineer/MCPI-slash-commands)
 
-### [@Grif](https://discrd.com/channels/689426213822922752)
+### [@Grif](https://github.com/Gryf2diams)
 
 For his help on the code (he programmed more than the half)
 
