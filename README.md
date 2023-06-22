@@ -23,5 +23,7 @@ Customization
 #### Line 83
 Edit `for line in capture("[YOUR CLIENT]"):`
 #### Clients :
-- MCPi Reborn : `/home/[YOUR_OS_USERNAME]/.local/bin/com.thebrokenrail.MCPIRebornClient.AppImage`
-- MCPi++ : `minecraft-pi-reborn-client`
+- MCPi Reborn : `client["reborn"]`
+- MCPi++ : `client["++"]`
+
+# DON'T MOVE WORLDEDIT FOLDER FROM DEFAULT FOLDER OR IT WILL CRASH (for the moment)
