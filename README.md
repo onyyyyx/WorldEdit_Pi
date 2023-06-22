@@ -16,3 +16,12 @@ Launch
 Just launch `main.py`
 
 [How to launch](https://github-production-user-asset-6210df.s3.amazonaws.com/126427514/247960958-a9480259-0a6a-4f4a-85c6-51ddaeff2c6b.mp4)
+
+Customization
+=============
+
+#### Line 83
+Edit `for line in capture("[YOUR CLIENT]"):`
+#### Clients :
+- MCPi Reborn : `~/.local/bin/com.thebrokenrail.MCPIRebornClient.AppImage`
+- MCPi++ : `minecraft-pi-reborn-client`
