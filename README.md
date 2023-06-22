@@ -8,7 +8,7 @@ Installation
 
 In a terminal : `git clone https://github.com/DarkAngel404/WorldEdit_MCPi.git`
 
-#### Don't forget to modify _TheRunaway_ by your username (from line 94 to line 99 of `main.py`)
+#### Don't forget to modify [MCPI_PSEUDO] by your MCPi pseudonyme (from line 94 to line 99 of `main.py`) and [YOUR_OS_USERNAME] by your OS username (by default `pi`)
 
 Launch
 ======
@@ -23,5 +23,5 @@ Customization
 #### Line 83
 Edit `for line in capture("[YOUR CLIENT]"):`
 #### Clients :
-- MCPi Reborn : `~/.local/bin/com.thebrokenrail.MCPIRebornClient.AppImage`
+- MCPi Reborn : `/home/[YOUR_OS_USERNAME]/.local/bin/com.thebrokenrail.MCPIRebornClient.AppImage`
 - MCPi++ : `minecraft-pi-reborn-client`
