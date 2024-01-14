@@ -1,7 +1,7 @@
 Thanks to
 =========
 
-### [@Wallee](https://github.com/Red-exe-Engineer)
+### [@Red-exe-Engineer](https://github.com/Red-exe-Engineer)
 
 For his [MCPi Slash Commands mod](https://github.com/Red-exe-Engineer/MCPI-slash-commands)
 
