@@ -1,8 +1,8 @@
 # WorldEdit\_MCPi 
 
-**__```diff
+```diff
 - Read this file carefully
-```__**
+```
 
 Normally to re-create WorldEdit mod in MCPi (Reborn or ++)
 
