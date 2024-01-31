@@ -1,7 +1,7 @@
 # WorldEdit\_MCPi 
 
-```c
-# Read this file carefully
+```css
+[Read this file carefully]
 ```
 
 Normally to re-create WorldEdit mod in MCPi (Reborn or ++)
