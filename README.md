@@ -1,6 +1,6 @@
 WorldEdit\_MCPi 
 =============================================
-> ```diff
+```diff
 - read carefully
 ```
 
