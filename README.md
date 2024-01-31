@@ -1,6 +1,6 @@
 # WorldEdit\_MCPi 
 
-[Danger](#){.btn .btn-danger}
+**__[color=#ff0000]Read carefully this file[/color]__**
 
 Normally to re-create WorldEdit mod in MCPi (Reborn or ++)
 
